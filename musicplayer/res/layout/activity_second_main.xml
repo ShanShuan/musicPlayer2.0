@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondMainActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/radioGroup1"
+        android:layout_alignParentLeft="true" >
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/myColor"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_local_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:text="本地音乐"
+            android:textColor="@drawable/item_bottom_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_new_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="新歌榜"
+            android:textColor="@drawable/item_bottom_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_hot_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="热歌榜"
+            android:textColor="@drawable/item_bottom_text_color" />
+
+        <RadioButton
+            android:id="@+id/rb_search_music"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="搜索音乐"
+            android:textColor="@drawable/item_bottom_text_color" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_controller"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_above="@+id/radioGroup1"
+        android:layout_alignParentLeft="true"
+        android:background="#77555555"
+         android:visibility="invisible">
+
+        <cn.wangzifeng.musicplayer.ui.CircleImageView
+            android:id="@+id/iv_display"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:paddingLeft="3dp"
+            android:src="@drawable/girl" />
+
+        <LinearLayout
+            android:id="@+id/ll_controller"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toRightOf="@+id/iv_display"
+            android:orientation="horizontal" >
+
+            <ImageView
+                   android:background="@drawable/button_bg_selector"
+                android:id="@+id/iv_previous"
+                android:layout_width="0dp"
+                android:layout_height="65dp"
+                android:layout_weight="0.93"
+                android:padding="11dp"
+                android:src="@drawable/pervious" />
+
+            <ImageView
+                   android:background="@drawable/button_bg_selector"
+                android:id="@+id/iv_pause_or_play"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:src="@drawable/pause" />
+
+            <ImageView
+                   android:background="@drawable/button_bg_selector"
+                android:id="@+id/iv_next"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:padding="11dp"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
